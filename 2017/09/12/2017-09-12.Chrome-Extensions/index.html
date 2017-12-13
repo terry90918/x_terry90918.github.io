@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            Chrome Extensions - 入門 | 
+        
+        LovePanda&#39;s Blog
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="LovePanda">
+    <meta name="description" itemprop="description" content="分享學習 x 使用者經驗 X 資料科學">
+    <meta name="keywords" content="前端工程師,Front-End Engineer,F2E,Introduction,Chrome,Extensions">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="LovePanda&#39;s Blog">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="K2Jo_nUnVY6AdF5V9wtYxH_xsZZ5YcBtr6Y0RCT7UcA" />
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://tpwilovepanda.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Chrome Extensions - 入門 | LovePanda&#39;s Blog">
+    <meta property="og:image" content="http://tpwilovepanda.github.io/img/favicon.png" />
+    <meta property="og:description" content="分享學習 x 使用者經驗 X 資料科學">
+    <meta property="og:article:tag" content="Introduction"> <meta property="og:article:tag" content="Chrome"> <meta property="og:article:tag" content="Extensions"> 
+
+    
+        <meta property="article:published_time" content="Tue Sep 12 2017 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Dec 13 2017 18:10:41 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Chrome Extensions - 入門 | LovePanda&#39;s Blog">
+    <meta name="twitter:description" content="分享學習 x 使用者經驗 X 資料科學">
+    <meta name="twitter:image" content="http://tpwilovepanda.github.io/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://tpwilovepanda.github.io" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/index.html",
+    "headline": "Chrome Extensions - 入門",
+    "datePublished": "Tue Sep 12 2017 00:00:00 GMT+0800",
+    "dateModified": "Wed Dec 13 2017 18:10:41 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "LovePanda",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar_1.png"
+        },
+        "description": "分享知識,程式大作戰"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "LovePanda&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Introduction,Chrome,Extensions前端工程師,Front-End Engineer,F2E",
+    "description": "分享學習 x 使用者經驗 X 資料科學",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-107372191-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Chrome-Extensions-入門"><span class="post-toc-number">1.</span> <span class="post-toc-text"><a href="#Chrome-Extensions-&#x5165;&#x9580;" class="headerlink" title="Chrome Extensions &#x5165;&#x9580;"></a>Chrome Extensions &#x5165;&#x9580;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#manifest-json"><span class="post-toc-number">1.1.</span> <span class="post-toc-text"><a href="#manifest-json" class="headerlink" title="manifest.json"></a><strong>manifest.json</strong></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#開啟開發人員工具-安裝擴充套件"><span class="post-toc-number">1.2.</span> <span class="post-toc-text"><a href="#&#x958B;&#x555F;&#x958B;&#x767C;&#x4EBA;&#x54E1;&#x5DE5;&#x5177;-&#x5B89;&#x88DD;&#x64F4;&#x5145;&#x5957;&#x4EF6;" class="headerlink" title="&#x958B;&#x555F;&#x958B;&#x767C;&#x4EBA;&#x54E1;&#x5DE5;&#x5177; &#x5B89;&#x88DD;&#x64F4;&#x5145;&#x5957;&#x4EF6;"></a>&#x958B;&#x555F;&#x958B;&#x767C;&#x4EBA;&#x54E1;&#x5DE5;&#x5177; <strong>&#x5B89;&#x88DD;&#x64F4;&#x5145;&#x5957;&#x4EF6;</strong></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#src-override"><span class="post-toc-number">1.3.</span> <span class="post-toc-text"><a href="#src-override" class="headerlink" title="src/override"></a><strong>src/override</strong></span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#創建-main-js-於-src-override，開始寫程式囉。"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text"><a href="#&#x5275;&#x5EFA;-main-js-&#x65BC;-src-override&#xFF0C;&#x958B;&#x59CB;&#x5BEB;&#x7A0B;&#x5F0F;&#x56C9;&#x3002;" class="headerlink" title="&#x5275;&#x5EFA; main.js &#x65BC; src/override&#xFF0C;&#x958B;&#x59CB;&#x5BEB;&#x7A0B;&#x5F0F;&#x56C9;&#x3002;"></a>&#x5275;&#x5EFA; <strong>main.js</strong> &#x65BC; src/override&#xFF0C;&#x958B;&#x59CB;&#x5BEB;&#x7A0B;&#x5F0F;&#x56C9;&#x3002;</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#overraid-html"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text"><a href="#overraid-html" class="headerlink" title="overraid.html"></a><strong>overraid.html</strong></span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#後續步驟如下"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text"><a href="#&#x5F8C;&#x7E8C;&#x6B65;&#x9A5F;&#x5982;&#x4E0B;" class="headerlink" title="&#x5F8C;&#x7E8C;&#x6B65;&#x9A5F;&#x5982;&#x4E0B;"></a>&#x5F8C;&#x7E8C;&#x6B65;&#x9A5F;&#x5982;&#x4E0B;</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Extensionizr-網站簡易中文翻譯"><span class="post-toc-number">2.</span> <span class="post-toc-text"><a href="#Extensionizr-&#x7DB2;&#x7AD9;&#x7C21;&#x6613;&#x4E2D;&#x6587;&#x7FFB;&#x8B6F;" class="headerlink" title="Extensionizr &#x7DB2;&#x7AD9;&#x7C21;&#x6613;&#x4E2D;&#x6587;&#x7FFB;&#x8B6F;"></a><a href="https://extensionizr.com/" target="_blank" rel="noopener">Extensionizr</a> &#x7DB2;&#x7AD9;&#x7C21;&#x6613;&#x4E2D;&#x6587;&#x7FFB;&#x8B6F;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Name-your-extension-選擇你的擴充功能"><span class="post-toc-number">2.1.</span> <span class="post-toc-text"><a href="#Name-your-extension-&#x9078;&#x64C7;&#x4F60;&#x7684;&#x64F4;&#x5145;&#x529F;&#x80FD;" class="headerlink" title="Name your extension - &#x9078;&#x64C7;&#x4F60;&#x7684;&#x64F4;&#x5145;&#x529F;&#x80FD;"></a>Name your extension - &#x9078;&#x64C7;&#x4F60;&#x7684;&#x64F4;&#x5145;&#x529F;&#x80FD;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Fine-tuning-微調"><span class="post-toc-number">2.2.</span> <span class="post-toc-text"><a href="#Fine-tuning-&#x5FAE;&#x8ABF;" class="headerlink" title="Fine tuning - &#x5FAE;&#x8ABF;"></a>Fine tuning - &#x5FAE;&#x8ABF;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#URL-permissions-URL-權限"><span class="post-toc-number">2.3.</span> <span class="post-toc-text"><a href="#URL-permissions-URL-&#x6B0A;&#x9650;" class="headerlink" title="URL permissions - URL &#x6B0A;&#x9650;"></a>URL permissions - URL &#x6B0A;&#x9650;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Permissions-權限"><span class="post-toc-number">2.4.</span> <span class="post-toc-text"><a href="#Permissions-&#x6B0A;&#x9650;" class="headerlink" title="Permissions - &#x6B0A;&#x9650;"></a>Permissions - &#x6B0A;&#x9650;</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://scontent.ftpe1-1.fna.fbcdn.net/v/t31.0-8/23509226_10208213116565139_5275308951492005584_o.jpg?oh=fc9578b4f62e1d54d2f0cd30bcbddd01&oe=5A9FFD45)">
+    
+            <p class="article-headline-p">
+                Chrome Extensions - 入門
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar_1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>LovePanda</strong>
+        <span>9月 12, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Chrome/">Chrome</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Extensions/">Extensions</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Introduction/">Introduction</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Chrome Extensions - 入門&url=http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/index.html&via=LovePanda" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/index.html&title=Chrome Extensions - 入門" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Chrome-Extensions-入門"><a href="#Chrome-Extensions-入門" class="headerlink" title="Chrome Extensions 入門"></a>Chrome Extensions 入門</h1><p>簡單介紹，如何使用 <strong>Chrome 擴充功能</strong> 設計開起新的分頁時，顯示自己喜愛的圖片。<br>先來到 <a href="https://extensionizr.com/" target="_blank" rel="noopener">Extensionizr</a> 網站，可幫助創建自己的 Chrome Extensions 基礎！ </p>
+<ol>
+<li>選擇 <strong>Browser action</strong>，因為要設計開啟新分頁時顯示漂亮圖片，而開啟新分頁屬於 Browser 部分。</li>
+<li>選擇 <strong>Background.html</strong>，漂亮圖片需要 html 撰寫 <code>&lt;img src=&quot;...&quot; alt=&quot;...&quot; srcset=&quot;...&quot;&gt;</code></li>
+<li>選擇 <strong>Blank options.html</strong>，點選擴充工具 Chrome Extensions 時，彈出自訂義選單，這邊我們簡單設計簡介內容。</li>
+<li>Content scripts 是什麼意思呢？大家可能有聽過 AdBlock，它使用的就是 Content scripts，使用者瀏覽特定頁面時，將 JavsScript 或 css 塞入並且修改頁面顯示內容，讓廣告不會出現，但此次不需要。</li>
+<li>選擇 <strong>Add jQuery 2.0.0</strong>，加入 jQuery 讓開發更方便</li>
+<li>其他此次尚未需要，如果有興趣，相關內容可以看文章最後的 <a href="http://extensionizr.com/" target="_blank" rel="noopener">Extensionizr.com</a> 簡易中文翻譯。</li>
+<li><strong>Download it!</strong></li>
+</ol>
+<p><img src="https://scontent.ftpe1-1.fna.fbcdn.net/v/t31.0-8/23509162_10208212761356259_4022435121810048611_o.jpg?oh=81d576f26a651abd36576ef8bee28122&amp;oe=5A654AD1" alt="Chrome-Extensions 選擇時的配置" title="Chrome-Extensions 選擇時的配置"></p>
+<p>上圖為 <a href="https://extensionizr.com/" target="_blank" rel="noopener">Extensionizr</a> 網站選擇時的配置。</p>
+<p>完成下載後，打開資料夾會看到此架構</p>
+<pre><code>├── _locales - 本地端語言設定位置
+├── css - 使用到的 CSS 放置位置
+├── icons - 圖示放置位置
+├── js - 使用到的 JavaScript 放置位置
+├── src - 背景、瀏覽器觸發、設定、覆寫之頁面的 HTML 放置位置
+└── manidest.json - 它就如同 Chrome 擴充功能的描述簡介
+</code></pre><h2 id="manifest-json"><a href="#manifest-json" class="headerlink" title="manifest.json"></a><strong>manifest.json</strong></h2><pre><code class="json">{
+  // 擴充功能名稱
+  &quot;name&quot;: &quot;CHANGE THIS : Extension boilerplate&quot;,
+  // 擴充功能版本
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;manifest_version&quot;: 2,
+  // 擴充功能簡介描述
+  &quot;description&quot;: &quot;This extension was created with the awesome extensionizr.com&quot;,
+  &quot;homepage_url&quot;: &quot;http://extensionizr.com&quot;,
+  // 擴充功能縮圖位置
+  &quot;icons&quot;: {
+    &quot;16&quot;: &quot;icons/icon16.png&quot;,
+    &quot;48&quot;: &quot;icons/icon48.png&quot;,
+    &quot;128&quot;: &quot;icons/icon128.png&quot;
+  },
+  // 預設本地端語言
+  &quot;default_locale&quot;: &quot;en&quot;,
+  // 背景執行程式位置
+  &quot;background&quot;: {
+    &quot;page&quot;: &quot;src/bg/background.html&quot;,
+    &quot;persistent&quot;: false
+  },
+  // 彈跳選單內容位置
+  &quot;options_page&quot;: &quot;src/options/index.html&quot;,
+  // 瀏覽器執行描述位置
+  &quot;browser_action&quot;: {
+    &quot;default_icon&quot;: &quot;icons/icon19.png&quot;,
+    &quot;default_title&quot;: &quot;browser action demo&quot;,
+    &quot;default_popup&quot;: &quot;src/browser_action/browser_action.html&quot;
+  },
+  // 覆寫內容位置
+  &quot;chrome_url_overrides&quot;: {
+    &quot;newtab&quot;: &quot;src/override/override.html&quot;
+  }
+}
+</code></pre>
+<p>將更新 <strong>manifest.json</strong> 以下內容，完成以後就可以存檔。</p>
+<ol>
+<li><code>name: &lt;擴充套件名子&gt;</code></li>
+<li><code>description: &lt;描述&gt;</code></li>
+</ol>
+<h2 id="開啟開發人員工具-安裝擴充套件"><a href="#開啟開發人員工具-安裝擴充套件" class="headerlink" title="開啟開發人員工具 安裝擴充套件"></a>開啟開發人員工具 <strong>安裝擴充套件</strong></h2><ol>
+<li>開啟 <strong>Chrome</strong> 右上角 <strong>自訂及管理 &gt; 更多工具 &gt; 擴充功能</strong>，進入之後勾選 <strong>開發人員模式</strong></li>
+<li>點選 <strong>載入未封裝功能</strong> 尋找此專案資料夾並按確定。</li>
+</ol>
+<p><img src="https://scontent.ftpe1-1.fna.fbcdn.net/v/t1.0-9/23517997_10208212761276257_7069548037352052842_n.jpg?oh=8190e9f8d165e8b8cfe9122aa1d8bd87&amp;oe=5AAD538E" alt="Chrome 開啟開發人員工具 安裝擴充套件 範例畫面"></p>
+<h2 id="src-override"><a href="#src-override" class="headerlink" title="src/override"></a><strong>src/override</strong></h2><h3 id="創建-main-js-於-src-override，開始寫程式囉。"><a href="#創建-main-js-於-src-override，開始寫程式囉。" class="headerlink" title="創建 main.js 於 src/override，開始寫程式囉。"></a>創建 <strong>main.js</strong> 於 src/override，開始寫程式囉。</h3><pre><code class="JavaScript">// 初始化取得福利 API 資料
+function initLoad() {
+    var data = [];
+    let xhr = new XMLHttpRequest();
+    xhr.open(&#39;GET&#39;, &#39;http://gank.io/api/data/%E7%A6%8F%E5%88%A9/100/1&#39;);
+    xhr.onreadystatechange = () =&gt; {
+        if (xhr.readyState === 4) {
+            data = JSON.parse(xhr.responseText);
+            getRandomArray(data, 0, 100, 10);
+        }
+    };
+    xhr.send();
+}
+
+// 取得亂數
+function getRandom(minNum, maxNum) { // 取得 minNum(最小值) ~ maxNum(最大值) 之間的亂數
+    return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+}
+
+// 隨機產生不重覆的n個數字
+function getRandomArray(data, minNum, maxNum, n) {
+    let rdmArray = [n]; // 儲存產生的陣列
+    for (let i = 0; i &lt; n; i++) {
+        let rdm = 0; // 暫存的亂數
+        let exist;
+        do {
+            exist = false; // 此亂數是否已存在
+            rdm = getRandom(minNum, maxNum); // 取得亂數
+            // 檢查亂數是否存在於陣列中，若存在則繼續回圈
+            if (rdmArray.indexOf(rdm) != -1) exist = true;
+        } while (exist); // 產生沒出現過的亂數時離開迴圈
+        rdmArray[i] = rdm;
+    }
+    let imgsArray = rdmArray;
+    creatCardLayout(data, imgsArray);
+}
+
+// 建立卡片框架
+function creatCardLayout(data, array) {
+    let element = &#39;&#39;;
+    for (let index = 0; index &lt; array.length; index++) {
+        element +=
+            `&lt;div class=&quot;card&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;${data.results[array[index]].url}&quot; alt=&quot;Card image&quot;&gt;
+            &lt;/div&gt;`;
+    }
+    $(&#39;.card-columns&#39;).html(element);
+}
+
+initLoad();
+</code></pre>
+<h3 id="overraid-html"><a href="#overraid-html" class="headerlink" title="overraid.html"></a><strong>overraid.html</strong></h3><p>完成 <strong>main.js</strong> 之後，我們要把畫面顯示出來創建 <strong>overraid.html</strong>。</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-TW&quot;&gt;
+
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+
+    &lt;title&gt;Beauty Tab&lt;/title&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css&quot; integrity=&quot;sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M&quot;
+        crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1 class=&quot;text-center&quot;&gt;Beauty Tab&lt;/h1&gt;
+        &lt;div class=&quot;card-columns&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- PS: js 禁止用 CDN 方式，但 CSS 可以 --&gt;
+    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+    &lt;script src=&quot;/js/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/js/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>恭喜，已經完成初步的 Chrome Extension 開發。</p>
+<h3 id="後續步驟如下"><a href="#後續步驟如下" class="headerlink" title="後續步驟如下"></a>後續步驟如下</h3><ol>
+<li>將開發好的專案壓縮成 zip 檔案。</li>
+<li>接著，開啟<a href="https://chrome.google.com/webstore/category/extensions?hl=zh-TW" target="_blank" rel="noopener">Chrome 線上應用程式商店</a>。</li>
+<li>進入<a href="https://chrome.google.com/webstore/developer/dashboard?hl=zh-TW" target="_blank" rel="noopener">開發人員資訊主頁</a></li>
+<li>選擇<strong>新增商品</strong>並上傳，這樣就完成囉。</li>
+<li>如要驗證你的帳戶並發佈商品，需支付一次性的開發人員註冊費 US$5.00。</li>
+</ol>
+<p>Chrome Extension 開發完成。<br><img src="https://scontent.ftpe1-1.fna.fbcdn.net/v/t31.0-8/23467223_10208212761396260_135096862158608237_o.jpg?oh=ba190ecf7a7027d585013afce044ed3d&amp;oe=5A9454DB" alt="Chrome Extension 範例截圖"></p>
+<hr>
+<h1 id="Extensionizr-網站簡易中文翻譯"><a href="#Extensionizr-網站簡易中文翻譯" class="headerlink" title="Extensionizr 網站簡易中文翻譯"></a><a href="https://extensionizr.com/" target="_blank" rel="noopener">Extensionizr</a> 網站簡易中文翻譯</h1><h2 id="Name-your-extension-選擇你的擴充功能"><a href="#Name-your-extension-選擇你的擴充功能" class="headerlink" title="Name your extension - 選擇你的擴充功能"></a>Name your extension - 選擇你的擴充功能</h2><ol>
+<li>Hidden extension<ul>
+<li>如果您不想要擴充功能的任何可視化表示，請使用此選項。 當您只想使用注入腳本時。</li>
+</ul>
+</li>
+<li>Page action<ul>
+<li>使用頁面操作將圖標放在地址欄中。 頁面操作表示可以在當前頁面上執行的操作，但不適用於所有頁面。</li>
+</ul>
+</li>
+<li>Browser action<ul>
+<li>使用瀏覽器操作將圖標放在Google Chrome主工具欄中的地址欄右側。 除了圖標之外，瀏覽器操作還可以具有工具提示，徽章和彈出窗口。</li>
+</ul>
+</li>
+</ol>
+<h2 id="Fine-tuning-微調"><a href="#Fine-tuning-微調" class="headerlink" title="Fine tuning - 微調"></a>Fine tuning - 微調</h2><ol>
+<li>Extension type （如上 1.）</li>
+<li>Background page<ul>
+<li>Background.html<ul>
+<li>後台頁面是在擴展過程中運行的HTML頁面。 它在您的擴展的生命週期中存在，並且一次只有一個實例是活動的。</li>
+</ul>
+</li>
+<li>Background.js<ul>
+<li>在常見的情況下，後台頁面不需要任何HTML標記。 這些背景頁面可以單獨使用JavaScript文件實現</li>
+</ul>
+</li>
+<li>Presistent<ul>
+<li>取消選擇“持久”將背景頁面轉到事件頁面。 活動頁面只有在需要時加載。 當事件頁面沒有積極地做某事時，它被卸載，釋放內存和其他系統資源。</li>
+</ul>
+</li>
+<li>No background</li>
+</ul>
+</li>
+<li>Options page - 選項頁<ul>
+<li>Black options.html<ul>
+<li>要允許用戶自定義擴展的行為，您可能希望提供一個選項頁面。 如果您這樣做，則會從擴展管理頁面chrome：// extensions提供一個鏈接。 單擊選項鍊接將打開指向您的選項頁面的新選項卡。</li>
+</ul>
+</li>
+<li>“Fancy settings”  options<ul>
+<li>適用於Chrome擴展程序的花式，Chrome瀏覽器相似設置。 功能包括搜索，標籤，組等</li>
+</ul>
+</li>
+<li>No options page<ul>
+<li>沒有選項頁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Override - 覆蓋<ul>
+<li>Override new tab<ul>
+<li>覆蓋當用戶創建新的選項卡或窗口時顯示的頁面。 您還可以通過輸入chrome：// newtab的URL訪問此頁面。</li>
+</ul>
+</li>
+<li>Override bookmarks<ul>
+<li>覆蓋當用戶從“工具”菜單中選擇“書籤管理器”菜單項時顯示的頁面。 您還可以通過輸入網址chrome：//書籤來訪問此頁面。</li>
+</ul>
+</li>
+<li>Override history<ul>
+<li>用戶從“工具”菜單中選擇“歷史記錄”菜單項時顯示的覆蓋頁面。 您還可以通過輸入chrome：//歷史記錄訪問此頁面。</li>
+</ul>
+</li>
+<li>No Override</li>
+</ul>
+</li>
+<li>Content scriipts - 內容腳本<ul>
+<li>Inject css<ul>
+<li>注入網頁的CSS文件。 使用inject.css自定義網頁樣式。</li>
+</ul>
+</li>
+<li>Inject js<ul>
+<li>在網頁上下文中運行的JavaScript文件。 通過使用標準的文檔對像模型（DOM），他們可以讀取瀏覽器訪問的網頁的詳細信息，或者對它們進行更改。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Misc addons - 雜項插件<ul>
+<li>Add omnibox support<ul>
+<li>omnibox API允許您使用Google Chrome的地址欄（也稱為多功能框）註冊關鍵字。</li>
+</ul>
+</li>
+<li>Add jQuery 2.0.0<ul>
+<li>將jQuery添加到您的擴展名</li>
+</ul>
+</li>
+<li>Add Angular.js 1.0.6<ul>
+<li>將AngularJS添加到您的擴展名</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="URL-permissions-URL-權限"><a href="#URL-permissions-URL-權限" class="headerlink" title="URL permissions - URL 權限"></a>URL permissions - URL 權限</h2><ul>
+<li>Separated by “;” (<a href="https://*/*" target="_blank" rel="noopener">https://*/*</a> ; <a href="http://google.com/*" target="_blank" rel="noopener">http://google.com/*</a>)<ul>
+<li>網址權限是一種匹配模式集，可讓您的擴展訪問一個或多個主機。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Permissions-權限"><a href="#Permissions-權限" class="headerlink" title="Permissions - 權限"></a>Permissions - 權限</h2><ol>
+<li>Bookmarks<ul>
+<li>使用chrome.bookmarks模塊創建，整理和以其他方式操作書籤。 另請參閱覆蓋頁面，您可以使用它們來創建自定義書籤管理器頁面。</li>
+</ul>
+</li>
+<li>Chrome://favicon<ul>
+<li>如果擴展名使用“chrome：// favicon / url”機制顯示頁面的圖標，則必需。 例如“chrome：// favicon / http：//www.google.com/” (<a href="http://www.google.com/%E2%80%9D" target="_blank" rel="noopener">http://www.google.com/%E2%80%9D</a>)</li>
+</ul>
+</li>
+<li>Clipboard read access<ul>
+<li>如果擴展名使用document.execCommand（’paste’），則必需。</li>
+</ul>
+</li>
+<li>Clipboard write access<ul>
+<li>表示應用程序或擴展名使用document.execCommand（’copy’）或document.execCommand（’cut’）。</li>
+</ul>
+</li>
+<li>Content Settings<ul>
+<li>內容設置允許您根據每個站點而不是全局自定義Chrome的行為。</li>
+</ul>
+</li>
+<li>Context menus<ul>
+<li>上下文菜單模塊允許您將項目添加到Google Chrome的上下文菜單。</li>
+</ul>
+</li>
+<li>Cookies<ul>
+<li>訪問指定域的Cookie。</li>
+</ul>
+</li>
+<li>FileBrowserHandler<ul>
+<li>使用chrome.fileBrowserHandler模塊來擴展Chrome操作系統文件瀏覽器。 例如，您可以使用此API來使用戶將文件上傳到您的網站。重要信息：此API僅適用於Chrome操作系統</li>
+</ul>
+</li>
+<li>Text to speech<ul>
+<li>使用chrome.tts模塊播放合成的文本到語音（TTS）。 另請參見相關的ttsEngine模塊，它允許擴展來實現語音引擎。</li>
+</ul>
+</li>
+<li>Text to speech engine<ul>
+<li>使用chrome.ttsEngine模塊來實現使用擴展名的文本到語音（TTS）引擎。</li>
+</ul>
+</li>
+<li>History<ul>
+<li>使用chrome.history模塊與瀏覽器的訪問頁面記錄進行交互。 您可以在瀏覽器的歷史記錄中添加，刪除和查詢網址。 要用您自己的版本覆蓋歷史頁面，請參閱覆蓋頁面。</li>
+</ul>
+</li>
+<li>Idle<ul>
+<li>使用chrome.idle API</li>
+</ul>
+</li>
+<li>Management<ul>
+<li>chrome.management模塊提供了管理已安裝並正在運行的擴展程序/應用程序列表的方法。 它對於覆蓋內置的新標籤頁的擴展特別有用。</li>
+</ul>
+</li>
+<li>Notifications<ul>
+<li>使用桌面通知通知用戶發生了重要的事情。 通知顯示在瀏覽器窗口之外。</li>
+</ul>
+</li>
+<li>Tabs<ul>
+<li>使用chrome.tabs模塊與瀏覽器的標籤系統進行交互。 您可以使用此模塊在瀏覽器中創建，修改和重新排列選項卡。</li>
+</ul>
+</li>
+<li>Geolocation<ul>
+<li>允許擴展程序使用建議的HTML5地理位置API，而不會提示用戶獲得許可。</li>
+</ul>
+</li>
+</ol>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文鏈接：</strong><a href="http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/">http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://tpwilovepanda.github.io/2017/09/12/2017-09-12.Chrome-Extensions/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//lovepanda.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        /* background-color: #eee; */
+        background-color: #164b78;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/09/14/2017-09-14.FrontEnd-專業術語簡介/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/10/2017-09-10.Hexo/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar_1.png" alt="LovePanda's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zxtw17985321@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: zxtw17985321@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分類
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Chrome/">Chrome<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Extensions/">Extensions<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Introduction/">Introduction<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">12</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="關於我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                關於我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情連結">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                友情連結
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="時間軸">
+                
+                    <i class="material-icons sidebar-material-icons">update</i>
+                
+                時間軸
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zxtw17985321" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/TpWILovePanda" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>LovePanda's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//lovepanda.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

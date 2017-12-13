@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            前端工程師手冊 - HTML | 
+        
+        LovePanda&#39;s Blog
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="LovePanda">
+    <meta name="description" itemprop="description" content="分享學習 x 使用者經驗 X 資料科學">
+    <meta name="keywords" content="前端工程師,Front-End Engineer,F2E,HTML">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="LovePanda&#39;s Blog">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="K2Jo_nUnVY6AdF5V9wtYxH_xsZZ5YcBtr6Y0RCT7UcA" />
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://tpwilovepanda.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="前端工程師手冊 - HTML | LovePanda&#39;s Blog">
+    <meta property="og:image" content="http://tpwilovepanda.github.io/img/favicon.png" />
+    <meta property="og:description" content="分享學習 x 使用者經驗 X 資料科學">
+    <meta property="og:article:tag" content="HTML"> 
+
+    
+        <meta property="article:published_time" content="Sat Sep 16 2017 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Dec 13 2017 20:45:47 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="前端工程師手冊 - HTML | LovePanda&#39;s Blog">
+    <meta name="twitter:description" content="分享學習 x 使用者經驗 X 資料科學">
+    <meta name="twitter:image" content="http://tpwilovepanda.github.io/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://tpwilovepanda.github.io" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/index.html",
+    "headline": "前端工程師手冊 - HTML",
+    "datePublished": "Sat Sep 16 2017 00:00:00 GMT+0800",
+    "dateModified": "Wed Dec 13 2017 20:45:47 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "LovePanda",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar_1.png"
+        },
+        "description": "分享知識,程式大作戰"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "LovePanda&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",HTML前端工程師,Front-End Engineer,F2E",
+    "description": "分享學習 x 使用者經驗 X 資料科學",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-107372191-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML-元素"><span class="post-toc-number">1.</span> <span class="post-toc-text"><a href="#HTML-&#x5143;&#x7D20;" class="headerlink" title="HTML &#x5143;&#x7D20;"></a>HTML &#x5143;&#x7D20;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DOCTYPES"><span class="post-toc-number">1.1.</span> <span class="post-toc-text"><a href="#DOCTYPES" class="headerlink" title="DOCTYPES"></a>DOCTYPES</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#meta-頁面相關資訊"><span class="post-toc-number">1.2.</span> <span class="post-toc-text"><a href="#meta-&#x9801;&#x9762;&#x76F8;&#x95DC;&#x8CC7;&#x8A0A;" class="headerlink" title="meta &#x9801;&#x9762;&#x76F8;&#x95DC;&#x8CC7;&#x8A0A;"></a><code>meta</code> &#x9801;&#x9762;&#x76F8;&#x95DC;&#x8CC7;&#x8A0A;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#body"><span class="post-toc-number">1.3.</span> <span class="post-toc-text"><a href="#body" class="headerlink" title="body"></a><code>body</code></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#head"><span class="post-toc-number">1.4.</span> <span class="post-toc-text"><a href="#head" class="headerlink" title="head"></a><code>head</code></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#title"><span class="post-toc-number">1.5.</span> <span class="post-toc-text"><a href="#title" class="headerlink" title="title"></a><code>title</code></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h1-h2-h3-h4-h5-h6-標題"><span class="post-toc-number">1.6.</span> <span class="post-toc-text"><a href="#h1-h2-h3-h4-h5-h6-&#x6A19;&#x984C;" class="headerlink" title="h1 h2 h3 h4 h5 h6 &#x6A19;&#x984C;"></a><code>h1 h2 h3 h4 h5 h6</code> &#x6A19;&#x984C;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#p-段落"><span class="post-toc-number">1.7.</span> <span class="post-toc-text"><a href="#p-&#x6BB5;&#x843D;" class="headerlink" title="p &#x6BB5;&#x843D;"></a><code>p</code> &#x6BB5;&#x843D;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#b-粗體-text"><span class="post-toc-number">1.8.</span> <span class="post-toc-text"><a href="#b-&#x7C97;&#x9AD4;-text" class="headerlink" title="b &#x7C97;&#x9AD4; text"></a><code>b</code> &#x7C97;&#x9AD4; <b>text</b></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#i-斜體-text"><span class="post-toc-number">1.9.</span> <span class="post-toc-text"><a href="#i-&#x659C;&#x9AD4;-text" class="headerlink" title="i &#x659C;&#x9AD4; text"></a><code>i</code> &#x659C;&#x9AD4; <i>text</i></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sup-上標-4th"><span class="post-toc-number">1.10.</span> <span class="post-toc-text"><a href="#sup-&#x4E0A;&#x6A19;-4th" class="headerlink" title="sup &#x4E0A;&#x6A19; 4th"></a><code>sup</code> &#x4E0A;&#x6A19; 4<sup>th</sup></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sub下標-CO2"><span class="post-toc-number">1.11.</span> <span class="post-toc-text"><a href="#sub&#x4E0B;&#x6A19;-CO2" class="headerlink" title="sub&#x4E0B;&#x6A19; CO2"></a><code>sub</code>&#x4E0B;&#x6A19; CO<sub>2</sub></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#br-斷行"><span class="post-toc-number">1.12.</span> <span class="post-toc-text"><a href="#br-&#x65B7;&#x884C;" class="headerlink" title="br &#x65B7;&#x884C;"></a><code>br</code> &#x65B7;&#x884C;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hr-水平線"><span class="post-toc-number">1.13.</span> <span class="post-toc-text"><a href="#hr-&#x6C34;&#x5E73;&#x7DDA;" class="headerlink" title="hr &#x6C34;&#x5E73;&#x7DDA;"></a><code>hr</code> &#x6C34;&#x5E73;&#x7DDA;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#em-blockquote語法標示"><span class="post-toc-number">1.14.</span> <span class="post-toc-text"><a href="#em-blockquote&#x8A9E;&#x6CD5;&#x6A19;&#x793A;" class="headerlink" title="em blockquote&#x8A9E;&#x6CD5;&#x6A19;&#x793A;"></a><code>em blockquote</code>&#x8A9E;&#x6CD5;&#x6A19;&#x793A;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#strong-em-加強與強調"><span class="post-toc-number">1.15.</span> <span class="post-toc-text"><a href="#strong-em-&#x52A0;&#x5F37;&#x8207;&#x5F37;&#x8ABF;" class="headerlink" title="strong, em &#x52A0;&#x5F37;&#x8207;&#x5F37;&#x8ABF;"></a><code>strong, em</code> &#x52A0;&#x5F37;&#x8207;&#x5F37;&#x8ABF;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#blockquote-引述"><span class="post-toc-number">1.16.</span> <span class="post-toc-text"><a href="#blockquote-&#x5F15;&#x8FF0;" class="headerlink" title="blockquote &#x5F15;&#x8FF0;"></a><code>blockquote</code> &#x5F15;&#x8FF0;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#q-引述"><span class="post-toc-number">1.17.</span> <span class="post-toc-text"><a href="#q-&#x5F15;&#x8FF0;" class="headerlink" title="q &#x5F15;&#x8FF0;"></a><code>q</code> &#x5F15;&#x8FF0;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#abbr-縮寫和縮略字"><span class="post-toc-number">1.18.</span> <span class="post-toc-text"><a href="#abbr-&#x7E2E;&#x5BEB;&#x548C;&#x7E2E;&#x7565;&#x5B57;" class="headerlink" title="abbr &#x7E2E;&#x5BEB;&#x548C;&#x7E2E;&#x7565;&#x5B57;"></a><code>abbr</code> &#x7E2E;&#x5BEB;&#x548C;&#x7E2E;&#x7565;&#x5B57;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cite-註解和定義"><span class="post-toc-number">1.19.</span> <span class="post-toc-text"><a href="#cite-&#x8A3B;&#x89E3;&#x548C;&#x5B9A;&#x7FA9;" class="headerlink" title="cite &#x8A3B;&#x89E3;&#x548C;&#x5B9A;&#x7FA9;"></a><code>cite</code> &#x8A3B;&#x89E3;&#x548C;&#x5B9A;&#x7FA9;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dfn"><span class="post-toc-number">1.20.</span> <span class="post-toc-text"><a href="#dfn" class="headerlink" title="dfn"></a><code>dfn</code></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#addres-作者細節"><span class="post-toc-number">1.21.</span> <span class="post-toc-text"><a href="#addres-&#x4F5C;&#x8005;&#x7D30;&#x7BC0;" class="headerlink" title="addres &#x4F5C;&#x8005;&#x7D30;&#x7BC0;"></a><code>addres</code> &#x4F5C;&#x8005;&#x7D30;&#x7BC0;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ins-del-s-內容的更動"><span class="post-toc-number">1.22.</span> <span class="post-toc-text"><a href="#ins-del-s-&#x5167;&#x5BB9;&#x7684;&#x66F4;&#x52D5;" class="headerlink" title="ins del s &#x5167;&#x5BB9;&#x7684;&#x66F4;&#x52D5;"></a><code>ins del s</code> &#x5167;&#x5BB9;&#x7684;&#x66F4;&#x52D5;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ol-ul-li-編號清單與項目清單"><span class="post-toc-number">1.23.</span> <span class="post-toc-text"><a href="#ol-ul-li-&#x7DE8;&#x865F;&#x6E05;&#x55AE;&#x8207;&#x9805;&#x76EE;&#x6E05;&#x55AE;" class="headerlink" title="ol ul li &#x7DE8;&#x865F;&#x6E05;&#x55AE;&#x8207;&#x9805;&#x76EE;&#x6E05;&#x55AE;"></a><code>ol ul li</code> &#x7DE8;&#x865F;&#x6E05;&#x55AE;&#x8207;&#x9805;&#x76EE;&#x6E05;&#x55AE;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dl-dt-dd-定義清單"><span class="post-toc-number">1.24.</span> <span class="post-toc-text"><a href="#dl-dt-dd-&#x5B9A;&#x7FA9;&#x6E05;&#x55AE;" class="headerlink" title="dl dt dd &#x5B9A;&#x7FA9;&#x6E05;&#x55AE;"></a><code>dl dt dd</code> &#x5B9A;&#x7FA9;&#x6E05;&#x55AE;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#a-連結-amp-EMAIL連結-amp-新視窗連結-amp-連結到同網頁德某部分"><span class="post-toc-number">1.25.</span> <span class="post-toc-text"><a href="#a-&#x9023;&#x7D50;-amp-EMAIL&#x9023;&#x7D50;-amp-&#x65B0;&#x8996;&#x7A97;&#x9023;&#x7D50;-amp-&#x9023;&#x7D50;&#x5230;&#x540C;&#x7DB2;&#x9801;&#x5FB7;&#x67D0;&#x90E8;&#x5206;" class="headerlink" title="a &#x9023;&#x7D50; &amp; EMAIL&#x9023;&#x7D50; &amp; &#x65B0;&#x8996;&#x7A97;&#x9023;&#x7D50; &amp; &#x9023;&#x7D50;&#x5230;&#x540C;&#x7DB2;&#x9801;&#x5FB7;&#x67D0;&#x90E8;&#x5206;"></a><code>a</code> &#x9023;&#x7D50; &amp; EMAIL&#x9023;&#x7D50; &amp; &#x65B0;&#x8996;&#x7A97;&#x9023;&#x7D50; &amp; &#x9023;&#x7D50;&#x5230;&#x540C;&#x7DB2;&#x9801;&#x5FB7;&#x67D0;&#x90E8;&#x5206;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#img-影像"><span class="post-toc-number">1.26.</span> <span class="post-toc-text"><a href="#img-&#x5F71;&#x50CF;" class="headerlink" title="img &#x5F71;&#x50CF;"></a><code>img</code> &#x5F71;&#x50CF;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#figure-figcaptionHTML5：圖和圖片說明"><span class="post-toc-number">1.27.</span> <span class="post-toc-text"><a href="#figure-figcaptionHTML5&#xFF1A;&#x5716;&#x548C;&#x5716;&#x7247;&#x8AAA;&#x660E;" class="headerlink" title="figure figcaptionHTML5&#xFF1A;&#x5716;&#x548C;&#x5716;&#x7247;&#x8AAA;&#x660E;"></a><code>figure figcaption</code>HTML5&#xFF1A;&#x5716;&#x548C;&#x5716;&#x7247;&#x8AAA;&#x660E;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#table-thead-tbody-tfoot-th-tr-td表格"><span class="post-toc-number">1.28.</span> <span class="post-toc-text"><a href="#table-thead-tbody-tfoot-th-tr-td&#x8868;&#x683C;" class="headerlink" title="table thead tbody tfoot th tr td&#x8868;&#x683C;"></a><code>table thead tbody tfoot th tr td</code>&#x8868;&#x683C;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#form-表單"><span class="post-toc-number">1.29.</span> <span class="post-toc-text"><a href="#form-&#x8868;&#x55AE;" class="headerlink" title="form &#x8868;&#x55AE;"></a><code>form</code> &#x8868;&#x55AE;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#input-輸入框"><span class="post-toc-number">1.30.</span> <span class="post-toc-text"><a href="#input-&#x8F38;&#x5165;&#x6846;" class="headerlink" title="input &#x8F38;&#x5165;&#x6846;"></a><code>input</code> &#x8F38;&#x5165;&#x6846;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#input-type-quot-file-quot"><span class="post-toc-number">1.30.1.</span> <span class="post-toc-text"><a href="#input-type-quot-file-quot" class="headerlink" title="input type=&quot;file&quot;"></a><code>input type=&quot;file&quot;</code></span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#input-type-quot-image-quot"><span class="post-toc-number">1.30.2.</span> <span class="post-toc-text"><a href="#input-type-quot-image-quot" class="headerlink" title="input type=&quot;image&quot;"></a><code>input type=&quot;image&quot;</code></span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#label-表單控制項貼標籤"><span class="post-toc-number">1.31.</span> <span class="post-toc-text"><a href="#label-&#x8868;&#x55AE;&#x63A7;&#x5236;&#x9805;&#x8CBC;&#x6A19;&#x7C64;" class="headerlink" title="label &#x8868;&#x55AE;&#x63A7;&#x5236;&#x9805;&#x8CBC;&#x6A19;&#x7C64;"></a><code>label</code> &#x8868;&#x55AE;&#x63A7;&#x5236;&#x9805;&#x8CBC;&#x6A19;&#x7C64;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#fieldest-legend群組表單元素"><span class="post-toc-number">1.32.</span> <span class="post-toc-text"><a href="#fieldest-legend&#x7FA4;&#x7D44;&#x8868;&#x55AE;&#x5143;&#x7D20;" class="headerlink" title="fieldest legend&#x7FA4;&#x7D44;&#x8868;&#x55AE;&#x5143;&#x7D20;"></a><code>fieldest legend</code>&#x7FA4;&#x7D44;&#x8868;&#x55AE;&#x5143;&#x7D20;</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML5"><span class="post-toc-number">2.</span> <span class="post-toc-text"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTML5-版面"><span class="post-toc-number">2.1.</span> <span class="post-toc-text"><a href="#HTML5-&#x7248;&#x9762;" class="headerlink" title="HTML5 &#x7248;&#x9762;"></a>HTML5 &#x7248;&#x9762;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#form-required-表單驗證-form-validation"><span class="post-toc-number">2.2.</span> <span class="post-toc-text"><a href="#form-required-&#x8868;&#x55AE;&#x9A57;&#x8B49;-form-validation" class="headerlink" title="form required &#x8868;&#x55AE;&#x9A57;&#x8B49;(form validation)"></a><code>form required</code> &#x8868;&#x55AE;&#x9A57;&#x8B49;(form validation)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#input-type-quot-date-quot-日期輸入"><span class="post-toc-number">2.3.</span> <span class="post-toc-text"><a href="#input-type-quot-date-quot-&#x65E5;&#x671F;&#x8F38;&#x5165;" class="headerlink" title="input type=&quot;date&quot; &#x65E5;&#x671F;&#x8F38;&#x5165;"></a><code>input type=&quot;date&quot;</code> &#x65E5;&#x671F;&#x8F38;&#x5165;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#input-type-quot-email-quot-type-quot-url-quot-EMAIL與URL輸入"><span class="post-toc-number">2.4.</span> <span class="post-toc-text"><a href="#input-type-quot-email-quot-type-quot-url-quot-EMAIL&#x8207;URL&#x8F38;&#x5165;" class="headerlink" title="input type=&quot;email&quot; type=&quot;url&quot; EMAIL&#x8207;URL&#x8F38;&#x5165;"></a><code>input type=&quot;email&quot; type=&quot;url&quot;</code> EMAIL&#x8207;URL&#x8F38;&#x5165;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#input-type-quot-search-quot-搜尋輸入"><span class="post-toc-number">2.5.</span> <span class="post-toc-text"><a href="#input-type-quot-search-quot-&#x641C;&#x5C0B;&#x8F38;&#x5165;" class="headerlink" title="input type=&quot;search&quot; &#x641C;&#x5C0B;&#x8F38;&#x5165;"></a><code>input type=&quot;search&quot;</code> &#x641C;&#x5C0B;&#x8F38;&#x5165;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#video"><span class="post-toc-number">2.6.</span> <span class="post-toc-text"><a href="#video" class="headerlink" title="video"></a><code>video</code></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#source-數個視訊來源"><span class="post-toc-number">2.7.</span> <span class="post-toc-text"><a href="#source-&#x6578;&#x500B;&#x8996;&#x8A0A;&#x4F86;&#x6E90;" class="headerlink" title="source &#x6578;&#x500B;&#x8996;&#x8A0A;&#x4F86;&#x6E90;"></a><code>source</code> &#x6578;&#x500B;&#x8996;&#x8A0A;&#x4F86;&#x6E90;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#audio-音訊"><span class="post-toc-number">2.8.</span> <span class="post-toc-text"><a href="#audio-&#x97F3;&#x8A0A;" class="headerlink" title="audio &#x97F3;&#x8A0A;"></a><code>audio</code> &#x97F3;&#x8A0A;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#audio-多重音訊"><span class="post-toc-number">2.8.1.</span> <span class="post-toc-text"><a href="#audio-&#x591A;&#x91CD;&#x97F3;&#x8A0A;" class="headerlink" title="audio &#x591A;&#x91CD;&#x97F3;&#x8A0A;"></a><code>audio</code> &#x591A;&#x91CD;&#x97F3;&#x8A0A;</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                前端工程師手冊 - HTML
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar_1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>LovePanda</strong>
+        <span>9月 16, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/HTML/">HTML</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=前端工程師手冊 - HTML&url=http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/index.html&via=LovePanda" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/index.html&title=前端工程師手冊 - HTML" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="HTML-元素"><a href="#HTML-元素" class="headerlink" title="HTML 元素"></a>HTML 元素</h1><p>屬性為元素做說明，元素整理。<br><code>&lt;p lang=&quot;en-us&quot;&gt;Paragraph in English&lt;/p&gt;</code> 範例中，屬性名是lang，屬性值是us-us，表示此元素裡所使用的語言。</p>
+<blockquote>
+<p><a href="https://www.w3schools.com/tags/default.asp" target="_blank" rel="noopener">HTML5 標籤速查圖表</a></p>
+</blockquote>
+<h2 id="DOCTYPES"><a href="#DOCTYPES" class="headerlink" title="DOCTYPES"></a>DOCTYPES</h2><pre><code class="html">&lt;!-- HTML 5 --&gt;
+&lt;!DOCTYPES html&gt;
+&lt;!-- HTML 4.01 Transitional --&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;!-- HTML 4.01 Strict --&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;!-- Transitional XHTML1.0--&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;!-- Strict XHTML1.0 --&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;!-- XML Declaration --&gt;
+&lt;?xml version=&quot;1.0&quot; ?&gt;
+</code></pre>
+<h2 id="meta-頁面相關資訊"><a href="#meta-頁面相關資訊" class="headerlink" title="meta 頁面相關資訊"></a><code>meta</code> 頁面相關資訊</h2><ul>
+<li>description<ul>
+<li>通常被搜尋引擎利用來了解頁面內容，最多155字元。</li>
+<li><code>&lt;meta name=&quot;description&quot; content=&quot;網頁簡介&quot; /&gt;</code></li>
+</ul>
+</li>
+<li>keywords<ul>
+<li>使用者用來搜尋此網頁的字詞清單，但對搜尋引擎索引網站已經沒任何意義！</li>
+<li><code>&lt;meta name=&quot;keywords&quot; content=&quot;關鍵字1, 關鍵字2, 關鍵字3&quot; /&gt;</code></li>
+</ul>
+</li>
+<li>robots<ul>
+<li>此屬性標明了搜尋引擎是否應該將此頁面加到它們的搜尋結果中。如果不應該加入，可以使用noindex值，如果要搜尋引擎加入此頁，但不加入此頁連結的其他頁面，使用nofollow值。</li>
+<li><code>&lt;meta name=&quot;robots&quot; content=&quot;nofollow&quot; /&gt;</code></li>
+</ul>
+</li>
+<li>author<ul>
+<li>標明網頁作者</li>
+<li><code>&lt;meta name=&quot;author&quot; content=&quot;作者名稱&quot; /&gt;</code></li>
+</ul>
+</li>
+<li>pragma<ul>
+<li>此屬性避免瀏覽器儲存快取頁面。</li>
+<li><code>&lt;meta name=&quot;pragma&quot; content=&quot;no-cache&quot; /&gt;</code></li>
+</ul>
+</li>
+<li>expires<ul>
+<li>因為瀏覽器會快取頁面，可以使用expires標明頁面何時過期（告訴之後不應該在快取），格式一定要相同。</li>
+<li><code>&lt;meta name=&quot;expires&quot; content=&quot;Fri, 04 Apr 2014 23:59:59 GMT&quot; /&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="body"><a href="#body" class="headerlink" title="body"></a><code>body</code></h2><p><code>body</code>元素內的東西都會顯示於瀏覽器中。</p>
+<h2 id="head"><a href="#head" class="headerlink" title="head"></a><code>head</code></h2><p><code>head</code>元素包含該頁面得些關資訊。</p>
+<h2 id="title"><a href="#title" class="headerlink" title="title"></a><code>title</code></h2><p><code>title</code>元素會出現在瀏覽器頂端的標題列。</p>
+<pre><code class="html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;This is Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="h1-h2-h3-h4-h5-h6-標題"><a href="#h1-h2-h3-h4-h5-h6-標題" class="headerlink" title="h1 h2 h3 h4 h5 h6 標題"></a><code>h1 h2 h3 h4 h5 h6</code> 標題</h2><p>HTML的標題分為六階段，且注意每頁<code>&lt;h1&gt;</code>只會有一個！這關係到SEO部分。</p>
+<pre><code class="html">&lt;h1&gt;Level 1 Heading&lt;/h1&gt;
+&lt;h2&gt;Level 2 Heading&lt;/h2&gt;
+&lt;h3&gt;Level 3 Heading&lt;/h3&gt;
+&lt;h4&gt;Level 4 Heading&lt;/h4&gt;
+&lt;h5&gt;Level 5 Heading&lt;/h5&gt;
+&lt;h6&gt;Level 6 Heading&lt;/h6&gt;
+</code></pre>
+<h2 id="p-段落"><a href="#p-段落" class="headerlink" title="p 段落"></a><code>p</code> 段落</h2><p>瀏覽器會使用新的一行來顯示段落，並與之前的保留一小段距離。</p>
+<pre><code class="html">&lt;p&gt;《魔戒》（英語：The Lord of the Rings，又名《指環王》）是一部由英國牛津大學教授、語言學家J·R·R·托爾金創作的史詩奇幻文學作品。&lt;/p&gt;
+&lt;p&gt;這個故事原是托爾金早年創作的兒童幻想小說《哈比人歷險記》（1937年）之續篇，但隨著故事的發展逐漸變得恢弘龐大。&lt;/p&gt;
+</code></pre>
+<h2 id="b-粗體-text"><a href="#b-粗體-text" class="headerlink" title="b 粗體 text"></a><code>b</code> 粗體 <b>text</b></h2><p>讓字體呈現粗體，但使用<code>&lt;b&gt;</code>元素並不代表有任何而外得意義。</p>
+<pre><code class="html">&lt;b&gt;text&lt;/b&gt;
+</code></pre>
+<h2 id="i-斜體-text"><a href="#i-斜體-text" class="headerlink" title="i 斜體 text"></a><code>i</code> 斜體 <i>text</i></h2><p>讓字體呈現斜體，使用<code>&lt;i&gt;</code>元素代表一段與其他內容不同方式說明的文字。</p>
+<pre><code class="html">&lt;i&gt;text&lt;/i&gt;
+</code></pre>
+<h2 id="sup-上標-4th"><a href="#sup-上標-4th" class="headerlink" title="sup 上標 4th"></a><code>sup</code> 上標 4<sup>th</sup></h2><pre><code class="html">4&lt;sup&gt;th&lt;/sup&gt;
+</code></pre>
+<h2 id="sub下標-CO2"><a href="#sub下標-CO2" class="headerlink" title="sub下標 CO2"></a><code>sub</code>下標 CO<sub>2</sub></h2><pre><code class="html">CO&lt;sub&gt;2&lt;/sub&gt;
+</code></pre>
+<h2 id="br-斷行"><a href="#br-斷行" class="headerlink" title="br 斷行"></a><code>br</code> 斷行</h2><pre><code class="html">&lt;p&gt;《魔戒》（英語：The Lord of the Rings，又名《指環王》）&lt;br&gt;是一部由英國牛津大學教授、語言學家J·R·R·托爾金創作的史詩奇幻文學作品。&lt;/p&gt;
+</code></pre>
+<h2 id="hr-水平線"><a href="#hr-水平線" class="headerlink" title="hr 水平線"></a><code>hr</code> 水平線</h2><p>水平線。<code>&lt;hr /&gt;</code>與<code>&lt;br /&gt;</code>屬於空元素(empty elements)，通常會有一個空白和一個斜線。有些前端工程師會忽略此寫法，但此習慣會是好事。</p>
+<h2 id="em-blockquote語法標示"><a href="#em-blockquote語法標示" class="headerlink" title="em blockquote語法標示"></a><code>em blockquote</code>語法標示</h2><p>語法標示如：<code>&lt;em&gt; &lt;blockquote&gt;</code>…等等，使用語法標示並不只有改變外觀，還有更精確地描述網頁內容，螢幕閱讀器與搜尋引擎可以使用這份額外的資訊。</p>
+<h2 id="strong-em-加強與強調"><a href="#strong-em-加強與強調" class="headerlink" title="strong, em 加強與強調"></a><code>strong, em</code> 加強與強調</h2><p><code>&lt;strong&gt;</code>代表其內容有很強烈的重要性。<br><code>&lt;em&gt;</code>代表文句中稍微有文意轉折的強調字眼。</p>
+<pre><code class="html">&lt;p&gt;如果你能&lt;strong&gt;征服&lt;/strong&gt;你的&lt;em&gt;恐懼&lt;/em&gt;，代表你可以戰勝死亡。&lt;/p&gt;
+</code></pre>
+<h2 id="blockquote-引述"><a href="#blockquote-引述" class="headerlink" title="blockquote 引述"></a><code>blockquote</code> 引述</h2><p>比較長，整個段落篇幅的引述。<code>&lt;blockquote&gt;</code>可以使用cite屬性來加入URL標明引述來源。</p>
+<pre><code class="html">&lt;blockquote cite=&quot;https://zh.wikipedia.org/wiki/%E5%92%96%E5%95%A1%E8%B1%86&quot;&gt;
+  &lt;p&gt;咖啡豆是咖啡屬植物的種子，咖啡屬植物的果實大小類似櫻桃，咖啡豆即為其中的核果。將咖啡豆烘焙加工後再磨碎成咖啡粉，即可烹製咖啡。&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<h2 id="q-引述"><a href="#q-引述" class="headerlink" title="q 引述"></a><code>q</code> 引述</h2><p>比較短的引述。<code>&lt;q&gt;</code>可以使用cite屬性來加入URL標明引述來源。</p>
+<pre><code class="html">&lt;p&gt;魔戒小說中曾提到：&lt;q cite=&quot;https://zh.wikiquote.org/zh-tw/%E9%AD%94%E6%88%92&quot;&gt;把手握緊，裡面什麼也沒有；把手放開，你得到的是一切。&lt;/q&gt;&lt;/p&gt;
+</code></pre>
+<h2 id="abbr-縮寫和縮略字"><a href="#abbr-縮寫和縮略字" class="headerlink" title="abbr 縮寫和縮略字"></a><code>abbr</code> 縮寫和縮略字</h2><p>縮寫，cite可以註明全名。</p>
+<pre><code class="html">&lt;p&gt;連結網路需要通過&lt;abbr title=&quot;網路伺服器&quot;&gt;伺服器&lt;/dfn&gt;，它是隨時連線的電腦。&lt;/p&gt;
+</code></pre>
+<h2 id="cite-註解和定義"><a href="#cite-註解和定義" class="headerlink" title="cite 註解和定義"></a><code>cite</code> 註解和定義</h2><p>標示註解的來源，cite不應該用在人名上。</p>
+<pre><code class="html">&lt;p&gt;&lt;cite&gt;咖啡豆是咖啡屬植物的種子，咖啡屬植物的果實大小類似櫻桃，咖啡豆即為其中的核果。將咖啡豆烘焙加工後再磨碎成咖啡粉，即可烹製咖啡。&lt;/cite&gt;引述來自維基百科&lt;/p&gt;
+</code></pre>
+<h2 id="dfn"><a href="#dfn" class="headerlink" title="dfn"></a><code>dfn</code></h2><p>第一次解釋新的術語時使用，術語：專業行話或學術概念。</p>
+<pre><code class="html">&lt;p&gt;連結網路需要通過&lt;dfn&gt;網路伺服器&lt;/dfn&gt;，它是隨時連線的電腦。&lt;/p&gt;
+</code></pre>
+<h2 id="addres-作者細節"><a href="#addres-作者細節" class="headerlink" title="addres 作者細節"></a><code>addres</code> 作者細節</h2><p>用來表示網頁作者的聯絡方式的特定用途。<strong>微格式 <a href="https://zh.wikipedia.org/wiki/HCard" target="_blank" rel="noopener">hCcard</a> 用來在原始碼中加入實體住址。</strong></p>
+<pre><code class="html">&lt;addres&gt;
+  &lt;p&gt;&lt;a href=&quot;mailto:author@exmaple.org&quot;&gt;author@exmaple.org&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;台北市忠孝東路153巷19號&lt;/p&gt;
+&lt;/addres&gt;
+</code></pre>
+<h2 id="ins-del-s-內容的更動"><a href="#ins-del-s-內容的更動" class="headerlink" title="ins del s 內容的更動"></a><code>ins del s</code> 內容的更動</h2><p><code>&lt;ins&gt;</code>顯示被插入文件的內容。<br><code>&lt;del&gt;</code>顯示被刪除的文字。<br><code>&lt;s&gt;</code>標示不再正確顯示或相關（但不應該被刪除）內容。</p>
+<pre><code class="html">&lt;p&gt;《魔戒》&lt;del&gt;戒魔&lt;/del&gt;（英語：The Lord of the Rings，&lt;s&gt;又名《指環王》&lt;/s&gt;）是一部由英國牛津大學教授、語言學家J·R·R·托爾金創作的史詩奇幻文學作品。&lt;ins&gt;這個故事原是托爾金早年創作的兒童幻想小說《哈比人歷險記》（1937年）之續篇，但隨著故事的發展逐漸變得恢弘龐大。&lt;/ins&gt;&lt;/p&gt;
+</code></pre>
+<p>《魔戒》<del>戒魔</del>（英語：The Lord of the Rings，<s>又名《指環王》</s>）是一部由英國牛津大學教授、語言學家J·R·R·托爾金創作的史詩奇幻文學作品。<ins>這個故事原是托爾金早年創作的兒童幻想小說《哈比人歷險記》（1937年）之續篇，但隨著故事的發展逐漸變得恢弘龐大。</ins></p>
+
+<h2 id="ol-ul-li-編號清單與項目清單"><a href="#ol-ul-li-編號清單與項目清單" class="headerlink" title="ol ul li 編號清單與項目清單"></a><code>ol ul li</code> 編號清單與項目清單</h2><pre><code class="html">&lt;ol&gt;
+  &lt;li&gt;情節大綱
+    &lt;ul&gt;
+      &lt;li&gt;魔戒同盟&lt;/li&gt;
+      &lt;li&gt;雙塔殊途&lt;/li&gt;
+      &lt;li&gt;王者再臨&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;主要人物
+    &lt;ul&gt;
+      &lt;li&gt;哈比人&lt;/li&gt;
+      &lt;li&gt;邁雅&lt;/li&gt;
+      &lt;li&gt;精靈&lt;/li&gt;
+      &lt;li&gt;矮人&lt;/li&gt;
+      &lt;li&gt;樹人&lt;/li&gt;
+      &lt;li&gt;人類&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<h2 id="dl-dt-dd-定義清單"><a href="#dl-dt-dd-定義清單" class="headerlink" title="dl dt dd 定義清單"></a><code>dl dt dd</code> 定義清單</h2><p>通常是一系列名詞與定義組成，<code>&lt;dl&gt;</code>製作定義清單，<code>&lt;dt&gt;</code>名詞，<code>&lt;dd&gt;</code>定義。有時會有兩個名詞一種定義或一個名詞両種定義。</p>
+<pre><code class="html">&lt;dl&gt;
+  &lt;dt&gt;哈比人&lt;/dt&gt;
+  &lt;dd&gt;哈比人（英語：Hobbits），是J.R.R.托爾金的奇幻小說中出現的一種虛構民族，體型嬌小為其特色，但並非矮人或侏儒。&lt;/dd&gt;
+  &lt;dt&gt;邁雅&lt;/dt&gt;
+  &lt;dd&gt;邁雅（Maiar）是J.R.R.托爾金的小說中虛構的世界－「中土」的一個種族。&lt;/dd&gt;
+  &lt;dt&gt;精靈&lt;/dt&gt;
+  &lt;dd&gt;J.R.R.托爾金的精靈高而優雅，擁有不凡的美麗。在《魔戒現身》（The Fellowship of the Ring）書中，哈比人佛羅多（Frodo）第一次見到高等精靈葛羅芬戴爾（Glorfindel）時，「彷彿有一道白光射穿葛羅芬戴爾的身形和衣著，就像射穿一道薄紗一樣。」&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h2 id="a-連結-amp-EMAIL連結-amp-新視窗連結-amp-連結到同網頁德某部分"><a href="#a-連結-amp-EMAIL連結-amp-新視窗連結-amp-連結到同網頁德某部分" class="headerlink" title="a 連結 &amp; EMAIL連結 &amp; 新視窗連結 &amp; 連結到同網頁德某部分"></a><code>a</code> 連結 &amp; EMAIL連結 &amp; 新視窗連結 &amp; 連結到同網頁德某部分</h2><pre><code class="html">&lt;!-- 連結 --&gt;
+&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E9%AD%94%E6%88%92#.E5.93.88.E6.AF.94.E4.BA.BA&quot;&gt;魔戒&lt;/a&gt;
+&lt;!-- 新視窗連結 --&gt;
+&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E9%A3%A2%E9%A4%93%E9%81%8A%E6%88%B2&quot; target=&quot;_blank&quot;&gt;飢餓遊戲&lt;/a&gt;
+&lt;!-- EMAIL連結 --&gt;
+&lt;a href=&quot;mailto:author@exmaple.org&quot;&gt;author@exmaple.org&lt;/a&gt;
+&lt;!-- 連結到同網頁的某部分 --&gt;
+&lt;h1 id=&quot;top&quot;&gt;EXAMPLE TITLE&lt;/h1&gt;
+&lt;a href=&quot;#example_1&quot;&gt;example_1&lt;/a&gt;
+&lt;a href=&quot;#example_2&quot;&gt;example_2&lt;/a&gt;
+&lt;h2 id=&quot;example_1&quot;&gt;&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, molestias illo? Harum quo ipsa quam. Aliquam quia ipsa asperiores excepturi quos distinctio quis quae fuga repellendus, quidem veritatis quo consequatur.&lt;/p&gt;
+&lt;h2 id=&quot;example_2&quot;&gt;&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, molestias illo? Harum quo ipsa quam. Aliquam quia ipsa asperiores excepturi quos distinctio quis quae fuga repellendus, quidem veritatis quo consequatur.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#top&quot;&gt;Top&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<h2 id="img-影像"><a href="#img-影像" class="headerlink" title="img 影像"></a><code>img</code> 影像</h2><ul>
+<li>src會告訴瀏覽器影像位置。</li>
+<li>alt提供該精確影像敘述替代文字，如果失去影像將顯示此敘述，供應螢幕閱讀軟體與搜尋引擎使用。</li>
+<li>title提供該影像資訊的額外資訊，當滑鼠移動至影像上方會有提示資訊。</li>
+<li>width與height指定影像寬高可以預留正在下載影像的所需空間，width與height建議用CSS取代。</li>
+</ul>
+<h2 id="figure-figcaptionHTML5：圖和圖片說明"><a href="#figure-figcaptionHTML5：圖和圖片說明" class="headerlink" title="figure figcaptionHTML5：圖和圖片說明"></a><code>figure figcaption</code>HTML5：圖和圖片說明</h2><p><code>&lt;figure&gt;</code>放入影像與說明，方便將兩者結合再一起，HTML5新增<code>&lt;figcaption&gt;</code>方便讓圖片加入說明。</p>
+<pre><code class="html">&lt;figure&gt;
+  &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/zh/thumb/a/ab/Hunger_games.jpg/250px-Hunger_games.jpg&quot; alt=&quot;飢餓遊戲&quot;&gt;
+  &lt;br /&gt;
+  &lt;figcaption&gt;「飢餓遊戲」，遊戲參加者有24人，他們要用任何方法殺死對方，剩下的一位參賽者，便是遊戲的優勝者。&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h2 id="table-thead-tbody-tfoot-th-tr-td表格"><a href="#table-thead-tbody-tfoot-th-tr-td表格" class="headerlink" title="table thead tbody tfoot th tr td表格"></a><code>table thead tbody tfoot th tr td</code>表格</h2><p>可以在<code>th</code>元素中使用scope屬性來標明它是欄位或行列的標題。<code>table thead tbody tfoot</code>對於螢幕閱讀器使用者很有幫助，可以協助將表格主要內容和第一列與最後一列區分開來。row表示行的標題。col表示欄的標題。</p>
+<pre><code class="html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;時間&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;內容&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td scope=&quot;row&quot;&gt;魔戒首部曲：魔戒現身&lt;/td&gt;
+      &lt;td&gt;2001&lt;/td&gt;
+      &lt;td&gt;《魔戒首部曲：魔戒現身》（英語：The Lord of the Rings: The Fellowship of the Ring），是一部於2001年上映的美國與紐西蘭合拍的奇幻史詩電影，由彼得·傑克森執導，為自J·R·R·托爾金的奇幻小說《魔戒》改編的《魔戒電影三部曲》中的第一部。美國新線電影公司出品。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td scope=&quot;row&quot;&gt;魔戒二部曲：雙城奇謀&lt;/td&gt;
+      &lt;td&gt;2002&lt;/td&gt;
+      &lt;td&gt;《魔戒二部曲：雙城奇謀》（英語：The Lord of the Rings: The Two Towers），是一部於2002年上映的美國與紐西蘭合拍的奇幻史詩電影，由彼得·傑克森執導，為自J·R·R·托爾金的奇幻小說《魔戒》改編的《魔戒電影三部曲》中的第二部。美國新線電影公司出品。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td scope=&quot;row&quot;&gt;魔戒三部曲：王者再臨&lt;/td&gt;
+      &lt;td&gt;2003&lt;/td&gt;
+      &lt;td&gt;《魔戒三部曲：王者再臨》（英語：The Lord of the Rings: The Return of the King），是一部於2003年上映的史詩奇幻電影，由彼得·傑克森執導，此片是根據J·R·R·托爾金的奇幻小說《魔戒》的第二部曲及第三部曲改編而成。本片也是《魔戒電影三部曲》的完結篇。&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td scope=&quot;row&quot;&gt;魔戒電影&lt;/td&gt;
+      &lt;td&gt;2001 - 2003&lt;/td&gt;
+      &lt;td&gt;《《魔戒三部曲：王者再臨》是繼1997年的《鐵達尼號》後，第二部票房突破10億美元的電影，該片也和《鐵達尼號》一樣，共贏得11座奧斯卡金像獎，包括「最佳影片」及「最佳導演」，是奧斯卡有史以來獲得兩位數提名的影片中唯一全數得獎的影片。三部曲的電影成功的讓更多人認識了《魔戒》系列作品。&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+<h2 id="form-表單"><a href="#form-表單" class="headerlink" title="form 表單"></a><code>form</code> 表單</h2><p>action：url。<br>method：get or post。<br>size：不應該使用在現在的表單上，它被用在舊(以前)的表單指定文字輸入欄位寬度，建議使用CSS取代size。<br>autocomplete：規定是否啟用表單的自動完成功能。<br><code>&lt;input type=&quot;password&quot;&gt;</code>螢幕顯示隱藏，但不代表密碼是以加密方式傳送。</p>
+<pre><code class="html">&lt;form action=&quot;http://www.example.com/login.php&quot; method=&quot;post&quot; autocomplete=&quot;on&quot;&gt;
+  &lt;p&gt;使用者名稱：&lt;input type=&quot;text&quot; name=&quot;username&quot; maxlength=&quot;30&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;使用者密碼：&lt;input type=&quot;password&quot; name=&quot;password&quot; maxlength=&quot;30&quot; /&gt;&lt;/p&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<h2 id="input-輸入框"><a href="#input-輸入框" class="headerlink" title="input 輸入框"></a><code>input</code> 輸入框</h2><h3 id="input-type-quot-file-quot"><a href="#input-type-quot-file-quot" class="headerlink" title="input type=&quot;file&quot;"></a><code>input type=&quot;file&quot;</code></h3><p>上傳時，method屬性必須是post。</p>
+<pre><code class="html">&lt;form action=&quot;http://www.example.com/upload.php&quot; method=&quot;post&quot;&gt;
+  &lt;p&gt;上傳音樂：&lt;/p&gt;
+  &lt;input type=&quot;file&quot; name=&quot;user-song&quot; /&gt;&lt;br /&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;upload&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="input-type-quot-image-quot"><a href="#input-type-quot-image-quot" class="headerlink" title="input type=&quot;image&quot;"></a><code>input type=&quot;image&quot;</code></h3><pre><code class="html">&lt;form action=&quot;http://www.example.com/subscribe.php&quot;&gt;
+  &lt;p&gt;訂閱最新消息：&lt;/p&gt;
+  &lt;input type=&quot;txtx&quot; name=&quot;email&quot; /&gt;
+  &lt;input type=&quot;image&quot; src=&quot;images/subscribe.jpg&quot; width=&quot;100&quot; height=&quot;20&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<h2 id="label-表單控制項貼標籤"><a href="#label-表單控制項貼標籤" class="headerlink" title="label 表單控制項貼標籤"></a><code>label</code> 表單控制項貼標籤</h2><p>兩種用法。</p>
+<ol>
+<li>將文字敘述與表單包起來。</li>
+<li>獨立於表單之外，使用for來表示屬於哪一個表單控制選項。<br>for的值配合代表的id，此方法可以用在任何表單控制上。當<code>&lt;label&gt;</code>用在勾選框或單選紐上面時，使用者可以點按鈕表單控制項或者標籤來進行選取。<pre><code class="html">&lt;label&gt;Age: &lt;input type=&quot;text&quot; name=&quot;age&quot; /&gt;&lt;/label&gt;
+&lt;br /&gt;
+Gender:
+&lt;input id=&quot;female&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;f&quot;&gt;&lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;
+&lt;input id=&quot;male&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;m&quot;&gt;&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="fieldest-legend群組表單元素"><a href="#fieldest-legend群組表單元素" class="headerlink" title="fieldest legend群組表單元素"></a><code>fieldest legend</code>群組表單元素</h2><pre><code class="html">&lt;fieldest&gt;
+  &lt;legend&gt;表單細節&lt;/legend&gt;
+  &lt;label&gt;Email：&lt;input type=&quot;txet&quot; name=&quot;email&quot; /&gt;&lt;/label&gt;&lt;br /&gt;
+  &lt;label&gt;Mobile：&lt;input type=&quot;txet&quot; name=&quot;mobile&quot; /&gt;&lt;/label&gt;&lt;br /&gt;
+  &lt;label&gt;Telephone：&lt;input type=&quot;txet&quot; name=&quot;telephone&quot; /&gt;&lt;/label&gt;
+&lt;/fieldest&gt;
+</code></pre>
+<h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="HTML5-版面"><a href="#HTML5-版面" class="headerlink" title="HTML5 版面"></a>HTML5 版面</h2><table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;article&gt;</code></td>
+<td>Defines an article</td>
+</tr>
+<tr>
+<td><code>&lt;aside&gt;</code></td>
+<td>Defines content aside from the page content</td>
+</tr>
+<tr>
+<td><code>&lt;bdi&gt;</code></td>
+<td>Isolates a part of text that might be formatted in a different direction from other text outside it</td>
+</tr>
+<tr>
+<td><code>&lt;details&gt;</code></td>
+<td>Defines additional details that the user can view or hide</td>
+</tr>
+<tr>
+<td><code>&lt;dialog&gt;</code></td>
+<td>Defines a dialog box or window</td>
+</tr>
+<tr>
+<td><code>&lt;figcaption&gt;</code></td>
+<td>Defines a caption for a <code>&lt;figure&gt;</code> element</td>
+</tr>
+<tr>
+<td><code>&lt;figure&gt;</code></td>
+<td>Specifies self-contained content, like illustrations,</td>
+<td>diagrams, photos, code listings, etc.</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>Defines a footer for a document or section</td>
+</tr>
+<tr>
+<td><code>&lt;header&gt;</code></td>
+<td>Specifies a header for a document or section</td>
+</tr>
+<tr>
+<td><code>&lt;main&gt;</code></td>
+<td>Specifies the main content of a document</td>
+</tr>
+<tr>
+<td><code>&lt;mark&gt;</code></td>
+<td>Defines marked/highlighted text</td>
+</tr>
+<tr>
+<td><code>&lt;menuitem&gt;</code></td>
+<td>Defines a command/menu item that the user can invoke from a popup menu</td>
+</tr>
+<tr>
+<td><code>&lt;meter&gt;</code></td>
+<td>Defines a scalar measurement within a known range (a gauge)</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>Defines navigation links</td>
+</tr>
+<tr>
+<td><code>&lt;progress&gt;</code></td>
+<td>Represents the progress of a task</td>
+</tr>
+<tr>
+<td><code>&lt;rp&gt;</code></td>
+<td>Defines what to show in browsers that do not support ruby annotations</td>
+</tr>
+<tr>
+<td><code>&lt;rt&gt;</code></td>
+<td>Defines an explanation/pronunciation of characters (for East Asian typography)</td>
+</tr>
+<tr>
+<td><code>&lt;ruby&gt;</code></td>
+<td>Defines a ruby annotation (for East Asian typography)</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>Defines a section in a document</td>
+</tr>
+<tr>
+<td><code>&lt;summary&gt;</code></td>
+<td>Defines a visible heading for a <code>&lt;details&gt;</code> element</td>
+</tr>
+<tr>
+<td><code>&lt;time&gt;</code></td>
+<td>Defines a date/time</td>
+</tr>
+<tr>
+<td><code>&lt;wbr&gt;</code></td>
+<td>Defines a possible line-break</td>
+</tr>
+</tbody>
+</table>
+<h2 id="form-required-表單驗證-form-validation"><a href="#form-required-表單驗證-form-validation" class="headerlink" title="form required 表單驗證(form validation)"></a><code>form required</code> 表單驗證(form validation)</h2><p>HTML5表單驗證之一就是required，這屬性不需要值，但在HTML4裡面，所有的屬性的需要值。</p>
+<pre><code class="html">&lt;form action=&quot;http://www.example.com/login.php&quot; method=&quot;post&quot; autocomplete=&quot;on&quot;&gt;
+  &lt;p&gt;使用者名稱：&lt;input type=&quot;text&quot; name=&quot;username&quot; maxlength=&quot;30&quot; required=&quot;required&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;使用者密碼：&lt;input type=&quot;password&quot; name=&quot;password&quot; maxlength=&quot;30&quot; required=&quot;required&quot; /&gt;&lt;/p&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<h2 id="input-type-quot-date-quot-日期輸入"><a href="#input-type-quot-date-quot-日期輸入" class="headerlink" title="input type=&quot;date&quot; 日期輸入"></a><code>input type=&quot;date&quot;</code> 日期輸入</h2><p>HTML5推出新的表單控制項來標準化某些資料的收集方式。</p>
+<pre><code class="html">&lt;input type=&quot;date&quot;&gt;
+</code></pre>
+<h2 id="input-type-quot-email-quot-type-quot-url-quot-EMAIL與URL輸入"><a href="#input-type-quot-email-quot-type-quot-url-quot-EMAIL與URL輸入" class="headerlink" title="input type=&quot;email&quot; type=&quot;url&quot; EMAIL與URL輸入"></a><code>input type=&quot;email&quot; type=&quot;url&quot;</code> EMAIL與URL輸入</h2><p>EMAIL：檢查使用者是否提供正確的EMAIL格式。<br>URL：檢查使用者是否提供正確的URL格式。</p>
+<pre><code class="html">&lt;!-- EMAIL --&gt;
+&lt;input type=&quot;email&quot;&gt;
+&lt;!-- URL --&gt;
+&lt;input type=&quot;url&quot;&gt;
+</code></pre>
+<h2 id="input-type-quot-search-quot-搜尋輸入"><a href="#input-type-quot-search-quot-搜尋輸入" class="headerlink" title="input type=&quot;search&quot; 搜尋輸入"></a><code>input type=&quot;search&quot;</code> 搜尋輸入</h2><p>新型瀏覽器提高優使性，例如十字游標按鈕，輸入資料時用來清除欄位。</p>
+<pre><code class="html">&lt;input type=&quot;search&quot; placeholder=&quot;Keyword&quot;&gt;
+</code></pre>
+<h2 id="video"><a href="#video" class="headerlink" title="video"></a><code>video</code></h2><p>HTML5中<code>&lt;video&gt;</code>所使用的所有屬性都不需要提供一個值，例如controls、autoplay和loop…等等，這些屬性就像開關一樣，存在就開啟，不存在就關閉。</p>
+<ul>
+<li>preload<ul>
+<li>告訴瀏覽器頁面載入時要做什麼</li>
+<li>none：使用者按下播放鍵之前，瀏覽器不該載入視訊。</li>
+<li>auto：瀏覽器應該在頁面載入的同時下載視訊。</li>
+<li>metadata：瀏覽器只需要收集大小、第一個影格、播放清單和影片長度之資訊。</li>
+</ul>
+</li>
+<li>src<ul>
+<li>視訊的路徑</li>
+</ul>
+</li>
+<li>poster<ul>
+<li>視訊下載時顯示的圖像，或者使用者播放之前，顯示的圖像。</li>
+</ul>
+</li>
+<li>controls<ul>
+<li>使用瀏覽器提供的播放控制鈕。</li>
+</ul>
+</li>
+<li>autoplay<ul>
+<li>自動播放。</li>
+</ul>
+</li>
+<li>loop<ul>
+<li>重複播放。<pre><code class="html">&lt;video src=&quot;video/example.mp4&quot;
+poster=&quot;images/example.png&quot;
+width=&quot;400&quot; height=&quot;300&quot;
+preload
+controls
+autoplay
+loop&gt;
+&lt;p&gt;影片內容簡介&lt;/p&gt;
+&lt;/video&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="source-數個視訊來源"><a href="#source-數個視訊來源" class="headerlink" title="source 數個視訊來源"></a><code>source</code> 數個視訊來源</h2><p>iPad Bug，mp4必須是第一個播放，否則無法播放。</p>
+<pre><code class="html">&lt;video poster=&quot;images/example.png&quot; width=&quot;400&quot; height=&quot;300&quot; preload controls loop&gt;
+  &lt;source src=&quot;video/example.mp4&quot; type=&#39;video/mp4;codecs=&quot;avcl.42E, mp4a.40.2&quot;&#39; /&gt;
+  &lt;source src=&quot;video/example.webm&quot; type=&#39;video/webm;codecs=&quot;vp8, vorbis&quot;&#39; /&gt;
+  &lt;p&gt;影片內容簡介&lt;/p&gt;
+&lt;/video&gt;
+</code></pre>
+<h2 id="audio-音訊"><a href="#audio-音訊" class="headerlink" title="audio 音訊"></a><code>audio</code> 音訊</h2><ul>
+<li>src<ul>
+<li>音訊的路徑</li>
+</ul>
+</li>
+<li>preload<ul>
+<li>告訴瀏覽器頁面載入時要做什麼</li>
+<li>none：使用者按下播放鍵之前，瀏覽器不該載入音訊。</li>
+<li>auto：瀏覽器應該在頁面載入的同時下載音訊。</li>
+<li>metadata：瀏覽器只需要收集大小、第一個音格、播放清單和音訊長度之資訊。</li>
+</ul>
+</li>
+<li>controls<ul>
+<li>使用瀏覽器提供的播放控制鈕，如果沒使用將不會顯示，可以用javascript指定自己的控制按鈕。</li>
+</ul>
+</li>
+<li>autoplay<ul>
+<li>自動播放。</li>
+</ul>
+</li>
+<li>loop<ul>
+<li>重複播放。</li>
+</ul>
+</li>
+<li>muted<ul>
+<li>音訊輸出靜音。<pre><code class="html">&lt;audio src=&quot;audio/example.ogg&quot; controls autoplay&gt;
+&lt;p&gt;音訊內容簡介&lt;/p&gt;
+&lt;/audio&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="audio-多重音訊"><a href="#audio-多重音訊" class="headerlink" title="audio 多重音訊"></a><code>audio</code> 多重音訊</h3><pre><code class="html">&lt;audio controls autoplay&gt;
+  &lt;source src=&quot;audio/example.ogg&quot; /&gt;
+  &lt;source src=&quot;audio/example.mp3&quot; /&gt;
+  &lt;p&gt;音訊內容簡介&lt;/p&gt;
+&lt;/audio&gt;
+</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文鏈接：</strong><a href="http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/">http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://tpwilovepanda.github.io/2017/09/16/2017-09-16.FrontEnd-HTML/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//lovepanda.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        /* background-color: #eee; */
+        background-color: #164b78;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/09/18/2017-09-20.FrontEnd-CSS/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/14/2017-09-14.FrontEnd-專業術語簡介/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar_1.png" alt="LovePanda's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zxtw17985321@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: zxtw17985321@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分類
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Chrome/">Chrome<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Extensions/">Extensions<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Introduction/">Introduction<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">12</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="關於我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                關於我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情連結">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                友情連結
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="時間軸">
+                
+                    <i class="material-icons sidebar-material-icons">update</i>
+                
+                時間軸
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zxtw17985321" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/TpWILovePanda" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>LovePanda's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//lovepanda.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
