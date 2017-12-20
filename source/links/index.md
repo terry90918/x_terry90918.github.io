@@ -1,5 +1,5 @@
 ---
-title: 友情連結
+title: 蒐藏籤
 date:
 layout: links
 ---

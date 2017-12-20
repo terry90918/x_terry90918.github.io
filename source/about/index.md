@@ -3,50 +3,35 @@ title: 關於我
 date:
 layout: about
 ---
-# TienYi Chen(lovepanda)
-* Blog: https://tpwilovepanda.github.io/
+# Tien-Yi Chen (陳天一)
 * E-mail: zxtw17985321@gmail.com
-* 工作資歷: 2年
+* Birth Date: Sep. 18th, 1990
 
 ## 簡述
-前端領域發展，充滿熱愛與學習。
-
-## 特質
-* 二年前端網頁開發經驗
-* 擅於與團隊溝通，相互瞭解開發狀況
-* 對新技術研究有熱情
+喜歡前端，喜歡學習。
 
 ## 工作經歷
-### 聖恩全生涯 Full Stack Engineer 2015/11 - 2017/09
-* 維護和代碼重構以提高代碼庫的質量
-* 製作 CSS framework(公司使用)
-* 購物平台前端與後端設計開發
-* 後端設計開發實施，商品不足發送電子郵件通知，摘要報告和操作提醒。  
-* Sever 升級改善性能瓶頸和優化代碼提高質量
-* 從數據庫調整優化前端性能，提高總體加載速度
-* 設計開發響應式「行動網站」 
-* 導入 Bootstrap 徹底重新設計可視化用戶界面  
-* 導入 Git 版本控制，維護效率提升流程  
-> 技術：HTML, CSS, PHP, JavaScript, jQuery, Bootstrap, Git, SQL
+### 聖恩全生涯
+* 時間: 2015 - 2017
+* 職位: Full Stack Engineer
+* 參與事件 / 完成事件:
+  * 前端 / 後端，維護與新功能開發
+  * 開發設計響應式「行動購物網站」
+  * 開發 CSS framework (公司內部使用)
+  * 導入 Bootstrap 徹底重新設計可視化用戶界面
+  * 導入 Git 版本控制，維護效率提升流程
+  * 參與 Android WebView App 開發
+  * 參與 Sever 升級專案，Php5.2 升級 Php7
+
+> 技能: HTML, CSS, PHP, JavaScript, jQuery, Bootstrap3, Git, MSSQL
 
 ## 專業技能
-* Frontend Design
-  * Web Design, RWD
-* HTML
-  * 進階：Pug
-* CSS
-  * 進階：SCSS
-* JavsScript
-  * 進階：jQeury, ReactJS, VueJS
-* 自動化工具
-  * gulp
-* 版本控制
-  * Git, Github
-* Search engine optimization
-* schema.org(網頁結構化)
-* 網路行銷工具
-  * Google Analytic, Facebook Pixel
-
-## 經驗
-* 開發 CSS framework
-* 開發 Android WebView App
+* Web Development
+  * FrontEnd: 
+    * HTML5, SEO, schema.org
+    * ES2015 / ES2016, jQuery, ReactJS, VueJS
+    * Webpack, GulpJS, BowerJS
+    * CSS3, SCSS, Bootstrap3 / Bootstrap4, RWD 
+  * BackEnd: PHP, Node.js
+  * Database: MySQL, MSSQL
+  * MVC: Express

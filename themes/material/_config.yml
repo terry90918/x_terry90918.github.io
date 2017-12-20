@@ -228,7 +228,7 @@ sidebar:
             link: "/about"
             icon: person
             divider: false
-        友情連結:
+        蒐藏籤:
             link: "/links"
             icon: loyalty
             divider: false
