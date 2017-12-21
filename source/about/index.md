@@ -28,10 +28,11 @@ layout: about
 ## 專業技能
 * Web Development
   * FrontEnd: 
-    * HTML5, SEO, schema.org
+    * HTML5, Pug, SEO, schema.org
     * ES2015 / ES2016, jQuery, ReactJS, VueJS
     * Webpack, GulpJS, BowerJS
-    * CSS3, SCSS, Bootstrap3 / Bootstrap4, RWD 
+    * CSS3, SCSS, Bootstrap3 / Bootstrap4, RWD
   * BackEnd: PHP, Node.js
   * Database: MySQL, MSSQL
   * MVC: Express
+  * Revision control: Git, GitHub
