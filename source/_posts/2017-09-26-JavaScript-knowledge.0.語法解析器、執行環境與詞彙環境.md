@@ -1,9 +1,8 @@
 ---
-title: JavaScript - 語法解析器、執行環境與詞彙環境
+title: 克服JS的奇怪部分-語法解析器、執行環境與詞彙環境
 date: 2017-09-26 00:00:00
-tags: [JavaScript]
-categories: [JavaScript]
-thumbnail: https://scontent.ftpe1-2.fna.fbcdn.net/v/t1.0-9/25152068_10208369508114830_4476640990371468565_n.jpg?oh=6efe943aac4e8fd6168c3a1dec176626&oe=5AD5D929
+tags: [javascript, js]
+categories: [javascript]
 top:
 ---
 ## 語法解析器

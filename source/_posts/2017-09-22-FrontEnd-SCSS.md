@@ -1,9 +1,8 @@
 ---
-title: 前端工程師手冊 - SCSS
+title: 前端工程師手冊-SCSS
 date: 2017-09-22 17:08:25
-tags: [CSS, SCSS]
-categories: [CSS]
-thumbnail: https://scontent.ftpe1-1.fna.fbcdn.net/v/t31.0-8/23550867_10208212858998700_7193661194857898858_o.jpg?oh=a584d65a7bf6675a79da13df21e0229c&oe=5A99A847
+tags: [css, scss]
+categories: [scss]
 top:
 ---
 # SCSS 
