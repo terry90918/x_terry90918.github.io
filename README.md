@@ -1,4 +1,4 @@
-# Hexo Blog (terry90918.github.io)
+# Hexo Blog
 
 Terry.TY Blog.
 
